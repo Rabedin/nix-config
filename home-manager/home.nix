@@ -97,6 +97,7 @@
       cava
       killall
       lact
+      obsidian
     ];
   };
 
