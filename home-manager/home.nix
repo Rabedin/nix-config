@@ -120,10 +120,10 @@
   # ZSH
   programs.zsh = {
     enable = true;
+    initExtra = "fortune | pokemonsay \n";
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";
-      initExtra = "fortune | pokemonsay \n";
     };
   };
 
