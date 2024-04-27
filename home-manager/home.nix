@@ -98,8 +98,21 @@
       killall
       lact
       obsidian
+      rustup
+      opera
+      lutris
+      wine
+      wine-wayland
+      swww
+      waypaper
+      eww-wayland
     ];
   };
+
+  # Allowing some insecure packages
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
 
   # ZSH
   programs.zsh = {
@@ -136,10 +149,12 @@
       "$fileManager" = "thunar";
       "$bar" = "waybar";
       "$menu" = "wofi --show drun";
+      "$wallpaper" = "waypaper --restore";
 
       # Autostart
       exec-once = [
         "$bar"
+        "$wallpaper"
       ];
 
       # Env variables
