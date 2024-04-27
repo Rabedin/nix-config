@@ -106,6 +106,7 @@
       swww
       waypaper
       eww-wayland
+      swaybg
     ];
   };
 
