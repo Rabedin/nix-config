@@ -109,6 +109,8 @@
       swaybg
       pokemonsay
       fortune
+      gcc
+      zellij
     ];
   };
 
