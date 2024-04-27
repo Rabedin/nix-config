@@ -107,6 +107,8 @@
       waypaper
       eww-wayland
       swaybg
+      pokemonsay
+      fortune
     ];
   };
 
