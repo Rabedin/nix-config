@@ -112,6 +112,17 @@
       gcc
       zellij
       pkg-config
+      gtk3
+      pango
+      gtk-layer-shell
+      libdbusmenu-gtk3
+      cairo
+      libgcc
+      glibc
+      socat
+      awk
+      stdbuf
+      jq
     ];
   };
 
