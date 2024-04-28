@@ -111,6 +111,7 @@
       fortune
       gcc
       zellij
+      pkg-config
     ];
   };
 
