@@ -120,9 +120,9 @@
       libgcc
       glibc
       socat
-      awk
-      stdbuf
+      gawk
       jq
+      coreutils
     ];
   };
 
