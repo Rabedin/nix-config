@@ -125,6 +125,7 @@
       coreutils
       playerctl
       lrzip
+      kicad
     ];
   };
 
