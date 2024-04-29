@@ -93,6 +93,7 @@
       shell = pkgs.zsh;
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEPsausosDB2J33VyLMCooKdnvHklUDwFOsFHhpIeEf5 red@nixos"
       ];
       extraGroups = ["networkmanager" "wheel"];
     };
@@ -105,6 +106,7 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [
+        22 # ssh
         25565 # Minecraft server hosting
         34197 # Factorio LAN server
         38763 # Minecraft LAN temp server
@@ -116,6 +118,7 @@
         37888 # P2Pool mini port
       ];
       allowedUDPPorts = [
+        22 # ssh
         25565 # Minecraft server hosting
         34197 # Factorio LAN server
         38763 # Minecraft LAN temp server

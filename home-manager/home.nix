@@ -87,7 +87,7 @@
       xfce.thunar
       pavucontrol
       wofi
-      waybar
+      # waybar
       # uwufetch
       freshfetch
       tmux
@@ -123,6 +123,8 @@
       gawk
       jq
       coreutils
+      playerctl
+      lrzip
     ];
   };
 
