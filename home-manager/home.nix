@@ -128,6 +128,7 @@
       kicad
       unzip
       qmk
+      vlc
     ];
   };
 
