@@ -126,6 +126,8 @@
       playerctl
       lrzip
       kicad
+      unzip
+      qmk
     ];
   };
 
