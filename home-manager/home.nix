@@ -129,6 +129,7 @@
       unzip
       qmk
       vlc
+      poetry
     ];
   };
 
@@ -165,13 +166,13 @@
       # Monitors
       monitor = [
         "DP-3,3440x1440@239.98900,0x0,1"
-        "HDMI-A-1,3840x2160@60,-3840x0,auto"
+        "HDMI-A-1,3840x2160@60,-1920x0,2"
       ];
 
       # Program variables
       "$terminal" = "kitty";
       "$fileManager" = "thunar";
-      "$bar" = "waybar";
+      "$bar" = "eww open bar";
       "$menu" = "wofi --show drun";
       "$wallpaper" = "waypaper --restore";
 

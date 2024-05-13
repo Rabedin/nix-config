@@ -79,6 +79,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+    supportedFilesystems = [ "ntfs" ];
     extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
     kernelModules = [ "v4l2loopback" ];
   };
@@ -97,6 +98,19 @@
       ];
       extraGroups = ["networkmanager" "wheel"];
     };
+    minidlna = {
+      extraGroups = [ "users" ];
+    };
+  };
+
+  # opengl shit for obs
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+      libvdpau-va-gl
+    ];
   };
 
   # Networking
@@ -107,6 +121,7 @@
       enable = true;
       allowedTCPPorts = [
         22 # ssh
+        8200 # miniDLNA
         25565 # Minecraft server hosting
         34197 # Factorio LAN server
         38763 # Minecraft LAN temp server
@@ -119,6 +134,7 @@
       ];
       allowedUDPPorts = [
         22 # ssh
+        8200 # miniDLNA
         25565 # Minecraft server hosting
         34197 # Factorio LAN server
         38763 # Minecraft LAN temp server
@@ -131,6 +147,19 @@
       ];
     };
     enableIPv6 = false;
+  };
+
+  # DLNA server
+  services.minidlna = {
+    enable = true;
+    openFirewall = true;
+    settings = {
+      notify_interval = 60;
+      friendly_name = "nixos";
+      media_dir = [
+        "V, /home/red/TruenasShare/Media/"
+      ];
+    };
   };
 
   # Time zone
@@ -178,6 +207,10 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Iosevka" ]; })
   ];  
+
+  # Udev rules for QMK
+  # services.udev.extraRules = builtins.readFile ./qmk-udev;
+  # services.udev.packages = [ ../home-manager/qmk_udev ];
 
   # Steam
   programs.steam = {
