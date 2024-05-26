@@ -131,6 +131,8 @@
         18080 # Monero p2p port
         37889 # P2Pool port
         37888 # P2Pool mini port
+        51820 # Wireguard
+        51821 # Wireguard
       ];
       allowedUDPPorts = [
         22 # ssh
@@ -144,6 +146,8 @@
         18080 # Monero p2p port
         37889 # P2Pool port
         37888 # P2Pool mini port
+        51820 # Wireguard
+        51821 # Wireguard
       ];
     };
     enableIPv6 = false;
@@ -157,7 +161,7 @@
       notify_interval = 60;
       friendly_name = "nixos";
       media_dir = [
-        "V, /home/red/TruenasShare/Media/"
+        "V, /mnt/NVME2TB/minidlna/"
       ];
     };
   };

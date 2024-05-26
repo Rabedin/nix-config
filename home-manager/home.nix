@@ -63,7 +63,7 @@
       grimblast
       wl-clipboard
       prismlauncher
-      obs-studio
+      # obs-studio
       osu-lazer
       spotify
       ranger
@@ -129,7 +129,12 @@
       unzip
       qmk
       vlc
-      poetry
+      davinci-resolve
+      shotcut
+      flowblade
+      lightworks
+      openshot-qt
+      python3
     ];
   };
 
@@ -137,6 +142,14 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
   ];
+
+  # OBS
+  programs.obs-studio = {
+    enable = true;
+    plugins = [
+      pkgs.obs-studio-plugins.wlrobs
+    ];
+  };
 
   # ZSH
   programs.zsh = {
@@ -166,7 +179,7 @@
       # Monitors
       monitor = [
         "DP-3,3440x1440@239.98900,0x0,1"
-        "HDMI-A-1,3840x2160@60,-1920x0,2"
+        "HDMI-A-1,3840x2160@60,-3840x0,2"
       ];
 
       # Program variables
@@ -188,7 +201,7 @@
       input = {
         "kb_layout" = "us";
         "follow_mouse" = 1;
-        "sensitivity" = 0; # -1.0 - 1.0, 0 means no modification.
+        "sensitivity" = 1; # -1.0 - 1.0, 0 means no modification.
       };
 
       general = {
