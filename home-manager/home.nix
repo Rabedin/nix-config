@@ -135,6 +135,7 @@
       lightworks
       openshot-qt
       python3
+      cura
     ];
   };
 
