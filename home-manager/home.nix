@@ -59,7 +59,7 @@
       discord
       zulu17
       ferium
-      minecraft
+      # minecraft
       grimblast
       wl-clipboard
       prismlauncher
@@ -68,7 +68,7 @@
       spotify
       ranger
       qbittorrent
-      vmware-workstation
+      # vmware-workstation
       vmfs-tools
       liquidctl
       corectrl
@@ -105,7 +105,7 @@
       wine-wayland
       swww
       waypaper
-      eww-wayland
+      eww
       swaybg
       pokemonsay
       fortune

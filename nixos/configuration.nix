@@ -227,7 +227,7 @@
   hardware.opentabletdriver.enable = true;
 
   # VMWare
-  virtualisation.vmware.host.enable = true;
+  virtualisation.vmware.host.enable = false;
 
   services.dnsmasq = {
     enable = true;
