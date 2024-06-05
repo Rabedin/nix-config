@@ -175,8 +175,10 @@
   # Enable X11 + gnome
   services.xserver = {
     enable = true;
-    layout = "us";
-    xkbVariant = "";
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
   };
