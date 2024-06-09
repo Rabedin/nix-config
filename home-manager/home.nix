@@ -68,7 +68,7 @@
       spotify
       ranger
       qbittorrent
-      # vmware-workstation
+      # unstable.vmware-workstation
       vmfs-tools
       liquidctl
       corectrl
@@ -136,6 +136,7 @@
       openshot-qt
       python3
       plasticity
+      prusa-slicer
     ];
   };
 
@@ -148,7 +149,9 @@
   programs.obs-studio = {
     enable = true;
     plugins = [
-      pkgs.obs-studio-plugins.wlrobs
+      # pkgs.obs-studio-plugins.wlrobs
+      pkgs.obs-studio-plugins.obs-vaapi
+      pkgs.obs-studio-plugins.obs-vkcapture
     ];
   };
 
@@ -179,8 +182,27 @@
     settings = {
       # Monitors
       monitor = [
-        "DP-3,3440x1440@239.98900,0x0,1"
-        "HDMI-A-1,3840x2160@60,-3840x0,2"
+        # Normie display setup
+        # "DP-3,3440x1440@239.98900,0x0,1"
+        # "HDMI-A-1,3840x2160@60,-3840x0,2"
+        # Chad display setup???
+        "HDMI-A-1,3840x2160@119.88,0x0,1"
+        "DP-3,3440x1440@239.98900,-1440x0,1,transform,3"
+        # "DP-3,disable"
+      ];
+
+      # Setting up all my workspaces
+      workspace = [
+        "1,monitor:HDMI-A-1,default:true"
+        "2,monitor:HDMI-A-1,default:false"
+        "3,monitor:HDMI-A-1,default:false"
+        "4,monitor:HDMI-A-1,default:false"
+        "5,monitor:HDMI-A-1,default:false"
+        "6,monitor:HDMI-A-1,default:false"
+        "7,monitor:HDMI-A-1,default:false"
+        "8,monitor:HDMI-A-1,default:false"
+        "9,monitor:HDMI-A-1,default:false"
+        "10,monitor:DP-3,default:true"
       ];
 
       # Program variables
@@ -260,6 +282,7 @@
       misc = {
           "force_default_wallpaper" = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
       };
+
 
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
       # "windowrulev2" = "suppressevent maximize, class:.*"; # You'll probably like this.
