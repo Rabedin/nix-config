@@ -138,6 +138,7 @@
       python3
       plasticity
       prusa-slicer
+      brave
     ];
   };
 
@@ -177,30 +178,6 @@
     };
   };
 
-  # Chromium
-  programs.chromium = {
-    enable = true;
-    package = pkgs.ungoogled-chromium;
-    extensions = [
-      # Chromium web store
-      {
-        id = "ocaahdebbfolfmndjeplogmgcagdmblk";
-        updateUrl = "https://raw.githubusercontent.com/NeverDecaf/chromium-web-store/master/updates.xml";
-      }
-      # Ublock origin
-      {
-        id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; 
-      }
-      # Proton pass
-      {
-        id = "ghmbeldphafepmbegfdlkpapadhbakde";
-      }
-      # Proton vpn
-      {
-        id = "jplgfhpmjnbigmhklmmbgecoobifkmpa";
-      }
-    ];
-  };
 
   # Hyprland
   wayland.windowManager.hyprland = {
