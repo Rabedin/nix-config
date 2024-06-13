@@ -62,7 +62,8 @@
       # minecraft
       grimblast
       wl-clipboard
-      prismlauncher
+      # prismlauncher
+      prismlauncher-unwrapped
       # obs-studio
       osu-lazer
       spotify
@@ -174,6 +175,26 @@
       cm = "commit";
       co = "checkout";
     };
+  };
+
+  # Chromium
+  programs.chromium = {
+    enable = true;
+    package = pkgs.ungoogled-chromium;
+    extensions = [
+      # Ublock origin
+      {
+        id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; 
+      }
+      # Proton pass
+      {
+        id = "ghmbeldphafepmbegfdlkpapadhbakde";
+      }
+      # Proton vpn
+      {
+        id = "jplgfhpmjnbigmhklmmbgecoobifkmpa";
+      }
+    ];
   };
 
   # Hyprland
