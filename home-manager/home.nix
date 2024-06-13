@@ -182,6 +182,11 @@
     enable = true;
     package = pkgs.ungoogled-chromium;
     extensions = [
+      # Chromium web store
+      {
+        id = "ocaahdebbfolfmndjeplogmgcagdmblk";
+        updateUrl = "https://raw.githubusercontent.com/NeverDecaf/chromium-web-store/master/updates.xml";
+      }
       # Ublock origin
       {
         id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; 
