@@ -215,6 +215,9 @@
   ];  
 
   # Udev rules for QMK
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+  '';
   # services.udev.extraRules = builtins.readFile ./qmk-udev;
   # services.udev.packages = [ ../home-manager/qmk_udev ];
 
