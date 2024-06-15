@@ -139,6 +139,8 @@
       plasticity
       prusa-slicer
       brave
+      via
+      vial
     ];
   };
 
