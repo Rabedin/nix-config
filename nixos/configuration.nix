@@ -96,7 +96,7 @@
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEPsausosDB2J33VyLMCooKdnvHklUDwFOsFHhpIeEf5 red@nixos"
       ];
-      extraGroups = ["networkmanager" "wheel"];
+      extraGroups = ["networkmanager" "wheel" "libvirtd"];
     };
     minidlna = {
       extraGroups = [ "users" ];
@@ -233,6 +233,12 @@
 
   # VMWare
   # virtualisation.vmware.host.enable = false;
+
+  # Libvirt
+  virtualisation.libvirtd.enable = true;
+
+  # virt-manager
+  programs.virt-manager.enable = true;
 
   services.dnsmasq = {
     enable = true;

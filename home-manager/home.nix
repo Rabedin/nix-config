@@ -141,6 +141,8 @@
       brave
       via
       vial
+      qemu
+      # virt-manager
     ];
   };
 
@@ -148,6 +150,14 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
   ];
+
+  # Stuff for virt-manager
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
+  };
 
   # OBS
   programs.obs-studio = {
@@ -229,7 +239,8 @@
       input = {
         "kb_layout" = "us";
         "follow_mouse" = 1;
-        "sensitivity" = 1; # -1.0 - 1.0, 0 means no modification.
+        # "sensitivity" = 1; # -1.0 - 1.0, 0 means no modification.
+        "force_no_accel" = true;
       };
 
       general = {
