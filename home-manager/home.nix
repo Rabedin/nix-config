@@ -159,6 +159,24 @@
     };
   };
 
+  # # GTK
+  # gtk = {
+  #   enable = true;
+  #   theme = {
+  #     package = pkgs.catppuccin-gtk;
+  #     name = "Catppuccin-mocha";
+  #   };
+  # };
+  #
+  # # Qt
+  # qt = {
+  #   enable = true;
+  #   style = {
+  #     package = pkgs.catppuccin-qt5ct;
+  #     name = "catppuccin-mocha";
+  #   };
+  # };
+  #
   # OBS
   programs.obs-studio = {
     enable = true;
