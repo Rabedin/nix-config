@@ -1,3 +1,12 @@
+
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   # Hyprland config
   wayland.windowManager.hyprland = {
     enable = true;
@@ -167,3 +176,4 @@
       ];
     };
   };
+}
