@@ -20,6 +20,8 @@
     ./hyprland.nix
   ];
 
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
+
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -178,35 +180,44 @@
   # };
   #
   # OBS
-  programs.obs-studio = {
-    enable = true;
-    plugins = [
-      # pkgs.obs-studio-plugins.wlrobs
-      pkgs.obs-studio-plugins.obs-vaapi
-      pkgs.obs-studio-plugins.obs-vkcapture
-    ];
-  };
-
-  # ZSH
-  programs.zsh = {
-    enable = true;
-    initExtra = "fortune | pokemonsay \n";
-    oh-my-zsh = {
+  programs = {
+    obs-studio = {
       enable = true;
-      theme = "agnoster";
+      plugins = [
+        # pkgs.obs-studio-plugins.wlrobs
+        pkgs.obs-studio-plugins.obs-vaapi
+        pkgs.obs-studio-plugins.obs-vkcapture
+      ];
     };
+
+    kitty = {
+      enable = true;
+      settings = {
+        # TODO Add kitty colour config here
+      };
+    };
+
+    zsh = {
+      enable = true;
+      initExtra = "fortune | pokemonsay \n";
+      oh-my-zsh = {
+        enable = true;
+        theme = "agnoster";
+      };
+    };
+
+    git = {
+      # enable = true;
+      userName = "Redwanul Abedin";
+      userEmail = "chromeplated@protonmail.com";
+      aliases = {
+        cm = "commit";
+        co = "checkout";
+      };
+    };
+
   };
 
-  # Git
-  programs.git = {
-    # enable = true;
-    userName = "Redwanul Abedin";
-    userEmail = "chromeplated@protonmail.com";
-    aliases = {
-      cm = "commit";
-      co = "checkout";
-    };
-  };
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
