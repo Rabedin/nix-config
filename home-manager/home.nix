@@ -193,9 +193,9 @@
 
     kitty = {
       enable = true;
-      settings = {
+      # settings = {
         # TODO Add kitty colour config here
-      };
+      # };
     };
 
     zsh = {
