@@ -145,6 +145,7 @@
       vial
       qemu
       # virt-manager
+      rpcs3
     ];
   };
 
