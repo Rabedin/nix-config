@@ -193,9 +193,18 @@
 
     kitty = {
       enable = true;
-      # settings = {
-        # TODO Add kitty colour config here
-      # };
+      settings = {
+        # Theming
+        include = "/home/red/.config/kitty/current-theme.conf";
+        background_opacity = "0.95";
+
+        # Font
+        font_size = 12;
+        font_family = "Iosevka nerd font";
+        bold_font = "auto";
+        italic_font = "auto";
+        bold_italic_font = "auto";
+      };
     };
 
     zsh = {
