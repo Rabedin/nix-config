@@ -181,6 +181,10 @@
     };
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
+    windowManager.dwm = {
+      enable = true;
+      src = /home/red/dwm/;
+    };
   };
 
   # Pipewire
