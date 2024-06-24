@@ -14,26 +14,26 @@
       # Monitors
       monitor = [
         # Normie display setup
-        # "DP-3,3440x1440@239.98900,0x0,1"
-        # "HDMI-A-1,3840x2160@60,-3840x0,2"
+        "DP-3,3440x1440@239.98900,0x0,1"
+        "HDMI-A-1,3840x2160@119.88,-200x-2160,1"
         # Chad display setup???
-        "HDMI-A-1,3840x2160@119.88,0x0,1"
-        "DP-3,3440x1440@239.98900,-1440x0,1,transform,3"
+        # "HDMI-A-1,3840x2160@119.88,0x0,1"
+        # "DP-3,3440x1440@239.98900,-1440x0,1,transform,3"
         # "DP-3,disable"
       ];
 
       # Setting up all my workspaces
       workspace = [
-        "1,monitor:HDMI-A-1,default:true"
-        "2,monitor:HDMI-A-1,default:false"
-        "3,monitor:HDMI-A-1,default:false"
-        "4,monitor:HDMI-A-1,default:false"
-        "5,monitor:HDMI-A-1,default:false"
-        "6,monitor:HDMI-A-1,default:false"
+        "1,monitor:DP-3,default:true"
+        "2,monitor:DP-3,default:false"
+        "3,monitor:DP-3,default:false"
+        "4,monitor:DP-3,default:false"
+        "5,monitor:DP-3,default:false"
+        "6,monitor:DP-3,default:false"
         "7,monitor:HDMI-A-1,default:false"
         "8,monitor:HDMI-A-1,default:false"
         "9,monitor:HDMI-A-1,default:false"
-        "10,monitor:DP-3,default:true"
+        "10,monitor:HDMI-A-1,default:true"
       ];
 
       # Program variables
