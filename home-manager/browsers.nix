@@ -32,22 +32,22 @@
         {
           # Chromium web store
           id = "ocaahdebbfolfmndjeplogmgcagdmblk";
-          updateURL = "https://raw.githubusercontent.com/NeverDecaf/chromium-web-store/master/updates.xml";
+          updateUrl = "https://raw.githubusercontent.com/NeverDecaf/chromium-web-store/master/updates.xml";
         }
         {
           # uBlock origin
           id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
-          # updateURL = "";
+          # updateUrl = "";
         }
         {
           # Proton pass
           id = "ghmbeldphafepmbegfdlkpapadhbakde";
-          # updateURL = "";
+          # updateUrl = "";
         }
         {
           # Proton VPN
           id = "jplgfhpmjnbigmhklmmbgecoobifkmpa";
-          # updateURL = "";
+          # updateUrl = "";
         }
       ];
     };
