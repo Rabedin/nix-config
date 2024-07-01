@@ -25,9 +25,31 @@
     chromium = {
       enable = true;
       package = pkgs.ungoogled-chromium;
-      extensions = {
-
-      };
+      commandLineArgs = [
+        "--extension-mime-request-handling=always-prompt-for-install"
+      ];
+      extensions = [
+        {
+          # Chromium web store
+          id = "ocaahdebbfolfmndjeplogmgcagdmblk";
+          updateURL = "https://raw.githubusercontent.com/NeverDecaf/chromium-web-store/master/updates.xml";
+        }
+        {
+          # uBlock origin
+          id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
+          # updateURL = "";
+        }
+        {
+          # Proton pass
+          id = "ghmbeldphafepmbegfdlkpapadhbakde";
+          # updateURL = "";
+        }
+        {
+          # Proton VPN
+          id = "jplgfhpmjnbigmhklmmbgecoobifkmpa";
+          # updateURL = "";
+        }
+      ];
     };
   };
 
