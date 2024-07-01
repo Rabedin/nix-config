@@ -49,6 +49,11 @@
           id = "jplgfhpmjnbigmhklmmbgecoobifkmpa";
           # updateUrl = "";
         }
+        {
+          # Catppuccin Mocha theme
+          id = "bkkmolkhemgaeaeggcmfbghljjjoofoh";
+          version = "4.1";
+        }
       ];
     };
   };

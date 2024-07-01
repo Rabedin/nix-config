@@ -159,14 +159,14 @@
   };
 
   # # GTK
-  # gtk = {
-  #   enable = true;
-  #   theme = {
-  #     package = pkgs.catppuccin-gtk;
-  #     name = "Catppuccin-mocha";
-  #   };
-  # };
-  #
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.catppuccin-gtk;
+      name = "Catppuccin-mocha";
+    };
+  };
+
   # # Qt
   # qt = {
   #   enable = true;
@@ -201,6 +201,43 @@
         italic_font = "auto";
         bold_italic_font = "auto";
       };
+    };
+
+    wofi = {
+      enable = true;
+      style = ''
+        * {
+          font-family: Iosevka nerd font;
+          color: #cdd6f4;
+        }
+
+        window {
+          background-color: #1e1e2e;
+          border-style: double;
+          border-width: 4px;
+          border-color: #585b70;
+          padding: 8px;
+          border-radius: 4px;
+        }
+
+        scrolledwindow {
+          padding: 8px;
+        }
+
+        flowboxchild {
+          background-color: #313244;
+          margin-top: 1px;
+          margin-bottom: 1px;
+        }
+
+        entry {
+          background-color: #1e1e2e;
+          border-style: double;
+          border-width: 4px;
+          border-color: #fab387;
+          border-radius: 4px;
+        }
+      '';
     };
 
     zsh = {
