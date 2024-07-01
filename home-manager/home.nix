@@ -18,6 +18,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     ./hyprland.nix
+    ./browsers.nix
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
