@@ -59,7 +59,7 @@
       ripgrep
       gnumake
       discord
-      zulu17
+      zulu
       ferium
       # minecraft
       grimblast
