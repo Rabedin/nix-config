@@ -54,7 +54,6 @@
     homeDirectory = "/home/red";
     packages = with pkgs; [
       firefox-bin
-      neofetch
       neovim
       ripgrep
       gnumake
@@ -91,7 +90,6 @@
       pavucontrol
       wofi
       # waybar
-      # uwufetch
       freshfetch
       tmux
       amdgpu_top
@@ -102,7 +100,6 @@
       lact
       obsidian
       rustup
-      opera
       lutris
       wine
       wine-wayland
@@ -113,7 +110,6 @@
       pokemonsay
       fortune
       gcc
-      zellij
       pkg-config
       gtk3
       pango
@@ -139,7 +135,6 @@
       openshot-qt
       python3
       plasticity
-      prusa-slicer
       brave
       via
       vial
