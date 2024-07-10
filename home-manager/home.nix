@@ -142,6 +142,7 @@
       qemu
       # virt-manager
       rpcs3
+      bottles
     ];
   };
 
