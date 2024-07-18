@@ -246,22 +246,31 @@
 
   # services
   services = {
-  dnsmasq = {
-    enable = true;
-  };
-
-  # This setups a SSH server. Very important if you're setting up a headless system.
-  # Feel free to remove if you don't need it.
-  openssh = {
-    enable = true;
-    settings = {
-      # Forbid root login through SSH.
-      PermitRootLogin = "no";
-      # Use keys only. Remove if you want to SSH using password (not recommended)
-      PasswordAuthentication = false;
+    # dnsmasq
+    dnsmasq = {
+      enable = true;
     };
-  };
 
+    # SSH
+    openssh = {
+      enable = true;
+      settings = {
+        # Forbid root login through SSH.
+        PermitRootLogin = "no";
+        # Use keys only. Remove if you want to SSH using password (not recommended)
+        PasswordAuthentication = false;
+      };
+    };
+
+    # Lact
+    lactd = {
+      description = "AMDGPU Control Daemon";
+      enable = true;
+      serviceConfig = {
+        ExecStart = "${pkgs.lact}/bin/lact daemon";
+      };
+      wantedBy = ["multi-user.target"];
+    };
   };
 
 
