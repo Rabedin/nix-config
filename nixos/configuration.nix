@@ -183,7 +183,9 @@
     desktopManager.gnome.enable = true;
     windowManager.dwm = {
       enable = true;
-      src = /home/red/dwm/;
+      package = pkgs.dwm.overrideAttrs {
+        src = /home/red/dwm;
+      };
     };
   };
 
