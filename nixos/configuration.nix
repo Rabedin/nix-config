@@ -261,7 +261,9 @@
         PasswordAuthentication = false;
       };
     };
+  };
 
+  systemd.services = {
     # Lact
     lactd = {
       description = "AMDGPU Control Daemon";
