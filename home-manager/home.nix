@@ -144,6 +144,7 @@
       rpcs3
       bottles
       godot_4
+      blender
     ];
   };
 
