@@ -59,7 +59,6 @@
       ripgrep
       gnumake
       discord
-      zulu
       ferium
       # minecraft
       grimblast
@@ -145,6 +144,8 @@
       bottles
       godot_4
       blender
+      jdk17
+      r2modman
     ];
   };
 
