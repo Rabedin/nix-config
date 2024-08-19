@@ -93,8 +93,10 @@
       isNormalUser = true;
       shell = pkgs.zsh;
       openssh.authorizedKeys.keys = [
-        # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEPsausosDB2J33VyLMCooKdnvHklUDwFOsFHhpIeEf5 red@nixos"
+        # Phone
+        # "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEPsausosDB2J33VyLMCooKdnvHklUDwFOsFHhpIeEf5 red@nixos"
+      ];
+      openssh.authorizedKeys.keyFiles = [
       ];
       extraGroups = ["networkmanager" "wheel" "libvirtd"];
     };
@@ -214,6 +216,9 @@
     mesa
     zulu8
     jre8
+    clang-tools
+    cmake
+    gcc-arm-embedded
   ];
 
   fonts.packages = with pkgs; [

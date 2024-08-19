@@ -144,8 +144,10 @@
       bottles
       godot_4
       blender
-      jdk17
+      openjdk17-bootstrap
       r2modman
+      lf
+      docker
     ];
   };
 
