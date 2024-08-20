@@ -15,6 +15,7 @@
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
+    inputs.ags.homeManagerModules.default
 
     # You can also split up your configuration and import pieces of it here:
     ./hyprland.nix
@@ -148,6 +149,8 @@
       r2modman
       lf
       docker
+      python312Packages.diffusers
+      python312Packages.pip
     ];
   };
 
@@ -207,6 +210,16 @@
         italic_font = "auto";
         bold_italic_font = "auto";
       };
+    };
+
+    ags = {
+      enable = true;
+      configDir = ./configs/ags;
+      extraPackages = with pkgs; [
+        gtksourceview
+        webkitgtk
+        accountsservice
+      ];
     };
 
     wofi = {

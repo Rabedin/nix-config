@@ -8,7 +8,7 @@
 }: {
   # Browsers without HM options
   home.packages = with pkgs; [
-    mullvad-browser
+    # mullvad-browser
   ];
 
   # Browsers with HM options

@@ -98,7 +98,7 @@
       ];
       openssh.authorizedKeys.keyFiles = [
       ];
-      extraGroups = ["networkmanager" "wheel" "libvirtd"];
+      extraGroups = ["networkmanager" "wheel" "libvirtd" "docker"];
     };
     minidlna = {
       extraGroups = [ "users" ];
@@ -246,7 +246,14 @@
   # virtualisation.vmware.host.enable = false;
 
   # Libvirt
-  virtualisation.libvirtd.enable = true;
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+    };
+    docker = {
+      enable = true;
+    };
+  };
 
   # virt-manager
   programs.virt-manager.enable = true;
