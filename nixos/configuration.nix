@@ -22,6 +22,8 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
+
+    inputs.nix-minecraft.nixosModules.minecraft-servers # for nix-minecraft
   ];
 
   nixpkgs = {
@@ -31,6 +33,8 @@
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
+
+      inputs.nix-minecraft.overlay # for nix-minecraft
 
       # You can also add overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
@@ -273,6 +277,21 @@
         PermitRootLogin = "no";
         # Use keys only. Remove if you want to SSH using password (not recommended)
         PasswordAuthentication = false;
+      };
+    };
+
+    # nix-minecraft
+    minecraft-servers = {
+      enable = true;
+      eula = true;
+
+      servers = {
+        cool-server1 = {
+          enable = true;
+          serverProperties = {/**/};
+          whitelist = {/**/};
+          jvmOpts = "-Xms16G -Xmx20G";
+        };
       };
     };
   };

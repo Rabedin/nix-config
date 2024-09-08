@@ -19,6 +19,9 @@
     # AGS
     ags.url = "github:Aylur/ags";
 
+    # nix-minecraft
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+
     # Reminder for me, flakes go above this line :)
   };
 

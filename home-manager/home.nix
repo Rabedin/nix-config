@@ -67,7 +67,7 @@
       # prismlauncher
       prismlauncher-unwrapped
       # obs-studio
-      osu-lazer
+      # osu-lazer-bin
       spotify
       ranger
       qbittorrent
@@ -151,6 +151,8 @@
       docker
       python312Packages.diffusers
       python312Packages.pip
+      audacity
+      p7zip
     ];
   };
 
