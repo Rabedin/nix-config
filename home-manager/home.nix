@@ -153,6 +153,7 @@
       python312Packages.pip
       audacity
       p7zip
+      vscode-langservers-extracted
     ];
   };
 
