@@ -154,6 +154,7 @@
       audacity
       p7zip
       vscode-langservers-extracted
+      packwiz
     ];
   };
 
