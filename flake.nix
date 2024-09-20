@@ -22,6 +22,9 @@
     # nix-minecraft
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
+    # Zen browser
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
+
     # Reminder for me, flakes go above this line :)
   };
 

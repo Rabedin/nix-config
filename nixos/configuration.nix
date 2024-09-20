@@ -102,7 +102,7 @@
       ];
       openssh.authorizedKeys.keyFiles = [
       ];
-      extraGroups = ["networkmanager" "wheel" "libvirtd" "docker"];
+      extraGroups = ["networkmanager" "wheel" "libvirtd" "docker" "vboxusers"];
     };
     minidlna = {
       extraGroups = [ "users" ];
@@ -223,6 +223,7 @@
     clang-tools
     cmake
     gcc-arm-embedded
+    inputs.zen-browser.packages."${system}".specific
   ];
 
   fonts.packages = with pkgs; [
@@ -257,6 +258,9 @@
     docker = {
       enable = true;
     };
+    virtualbox.host = {
+      enable = true;
+    };
   };
 
   # virt-manager
@@ -281,19 +285,30 @@
     };
 
     # nix-minecraft
-    minecraft-servers = {
-      enable = true;
-      eula = true;
-
-      servers = {
-        cool-server1 = {
-          enable = true;
-          serverProperties = {/**/};
-          whitelist = {/**/};
-          jvmOpts = "-Xms16G -Xmx20G";
-        };
-      };
-    };
+    # minecraft-servers = {
+    #   enable = true;
+    #   eula = true;
+    #
+    #   servers = {
+    #     cool-server1 = {
+    #       enable = true;
+    #       package = pkgs.fabricServers.fabric-1_20_6;
+    #       serverProperties = {/**/};
+    #       whitelist = {/**/};
+    #       jvmOpts = "-Xms16G -Xmx20G";
+    #       symlinks =
+    #       let
+    #         modpack = (pkgs.fetchPackwizModpack {
+    #           url = "/home/red/modpacks/ProjectArchitect3_6/pack.toml";
+    #           # packHash = "sha256-something";
+    #         });
+    #       in
+    #       {
+    #         "mods" = "${modpack}/mods";
+    #       };
+    #     };
+    #   };
+    # };
   };
 
   systemd.services = {
