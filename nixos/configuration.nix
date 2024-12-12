@@ -53,6 +53,13 @@
     };
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-runtime-wrapped-6.0.36"
+    "dotnet-runtime-6.0.36"
+    "dotnet-sdk-wrapped-6.0.428"
+    "dotnet-sdk-6.0.428"
+  ];
+
   # This will add each flake input as a registry
   # To make nix3 commands consistent with your flake
   nix.registry = (lib.mapAttrs (_: flake: {inherit flake;})) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
@@ -322,9 +329,6 @@
     };
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-runtime-wrapped-6.0.36"
-  ];
 
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
