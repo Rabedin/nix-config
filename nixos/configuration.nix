@@ -245,6 +245,11 @@
   # services.udev.extraRules = builtins.readFile ./qmk-udev;
   # services.udev.packages = [ ../home-manager/qmk_udev ];
 
+  services.ollama.enable = {
+    enable = true;
+    acceleration = "rocm";
+  };
+
   # Steam
   programs.steam = {
     enable = true;

@@ -156,7 +156,7 @@
       vscode-langservers-extracted
       packwiz
       qdirstat
-      ollama
+      # ollama
     ];
   };
 
