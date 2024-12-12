@@ -110,7 +110,7 @@
   };
 
   # opengl shit for obs
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
       intel-media-driver
@@ -196,7 +196,7 @@
   };
 
   # Pipewire
-  sound.enable = true;
+  # sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -210,7 +210,6 @@
   #nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    firefox
     home-manager
     vim
     kitty
@@ -322,6 +321,10 @@
       wantedBy = ["multi-user.target"];
     };
   };
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-runtime-wrapped-6.0.36"
+  ];
 
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
