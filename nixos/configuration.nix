@@ -245,7 +245,7 @@
   # services.udev.extraRules = builtins.readFile ./qmk-udev;
   # services.udev.packages = [ ../home-manager/qmk_udev ];
 
-  services.ollama.enable = {
+  services.ollama = {
     enable = true;
     acceleration = "rocm";
   };
