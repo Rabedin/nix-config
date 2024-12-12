@@ -155,7 +155,8 @@
       p7zip
       vscode-langservers-extracted
       packwiz
-      # ollama-rocm
+      ollama-rocm
+      qdirstat
     ];
   };
 

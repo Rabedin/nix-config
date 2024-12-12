@@ -79,10 +79,10 @@
               "passes" = 1;
               "vibrancy" = 0.1696;
           };
-          "drop_shadow" = true;
-          "shadow_range" = 4;
-          "shadow_render_power" = 3;
-          "col.shadow" = "rgba(11111bee)";
+          # "drop_shadow" = true;
+          # "shadow_range" = 4;
+          # "shadow_render_power" = 3;
+          # "col.shadow" = "rgba(11111bee)";
       };
 
       animations = {
@@ -104,7 +104,7 @@
       };
 
       master = {
-          "new_is_master" = true;
+          # "new_is_master" = true;
       };
 
       gestures = {
