@@ -126,6 +126,7 @@
       libvdpau-va-gl
     ];
   };
+  hardware.amdgpu.opencl.enable = true;
 
   # Networking
   networking = {
@@ -195,12 +196,12 @@
     };
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-    windowManager.dwm = {
-      enable = true;
-      package = pkgs.dwm.overrideAttrs {
-        src = /home/red/dwm;
-      };
-    };
+    # windowManager.dwm = {
+    #   enable = true;
+    #   package = pkgs.dwm.overrideAttrs {
+    #     src = /home/red/dwm;
+    #   };
+    # };
   };
 
   # Pipewire
